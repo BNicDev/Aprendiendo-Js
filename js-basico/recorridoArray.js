@@ -9,8 +9,20 @@ var articulo = [
 ];
 var filtrados = articulo.filter(function(articulo){
     return articulo.costo <= 500
-})
+}) // devuelve un array de articulos que sus costos sean menores a 500
 
 var nombreArticulos = articulo.map(function(articulo){
     return articulo.nombre
-})
+}) // devuelve un array de nombres de los articulos
+
+var encuentraArticulo = articulo.find(function(articulo){
+    return articulo.nombre === "laptop"
+}) // encuentra un articulo en especifico
+
+articulo.forEach(function(articulo){
+    console.log(articulo.nombre);
+})// filtra sobre el mismo array 
+
+var articulosBaratos = articulo.some(function(articulo){
+    return articulo.costo <= 700;
+})// valida true o false 
